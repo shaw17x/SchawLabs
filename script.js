@@ -21,129 +21,138 @@ const products = [
 
 
     // Retatrutide Series (MOVED TO POSITION 3 - THIRD POSITION OF FIRST ROW)  
-    { id: 3, name: 'Retatrutide', catNum: 'RT5-RT60', category: 'glp-1-agonists', price: { min: 98, max: 384 }, image: 'StockPhotos/Reta/Reta5mg.png', badge: 'Best Seller', popularity: 8,
+    // Retatrutide Pricing Formula Applied:
+    // RT5: VendorPricePerKit=$98, VialsPerKit=10, Cost_per_vial=$9.80, Single_Vial_Retail=round(9.80*2.5)=$25, Kit_Retail_A=round(98*2.5)=$245, Kit_Retail_B=round(25*10*0.975)=$244, Kit_Retail=min(245,244)=$244
+    // RT10: VendorPricePerKit=$130, VialsPerKit=10, Cost_per_vial=$13.00, Single_Vial_Retail=round(13.00*2.5)=$33, Kit_Retail_A=round(130*2.5)=$325, Kit_Retail_B=round(33*10*0.975)=$322, Kit_Retail=min(325,322)=$322
+    // RT15: VendorPricePerKit=$158, VialsPerKit=10, Cost_per_vial=$15.80, Single_Vial_Retail=round(15.80*2.5)=$40, Kit_Retail_A=round(158*2.5)=$395, Kit_Retail_B=round(40*10*0.975)=$390, Kit_Retail=min(395,390)=$390
+    // RT20: VendorPricePerKit=$189, VialsPerKit=10, Cost_per_vial=$18.90, Single_Vial_Retail=round(18.90*2.5)=$47, Kit_Retail_A=round(189*2.5)=$473, Kit_Retail_B=round(47*10*0.975)=$458, Kit_Retail=min(473,458)=$458
+    // RT30: VendorPricePerKit=$245, VialsPerKit=10, Cost_per_vial=$24.50, Single_Vial_Retail=round(24.50*2.5)=$61, Kit_Retail_A=round(245*2.5)=$613, Kit_Retail_B=round(61*10*0.975)=$595, Kit_Retail=min(613,595)=$595
+    // RT50: VendorPricePerKit=$345, VialsPerKit=10, Cost_per_vial=$34.50, Single_Vial_Retail=round(34.50*2.5)=$86, Kit_Retail_A=round(345*2.5)=$863, Kit_Retail_B=round(86*10*0.975)=$839, Kit_Retail=min(863,839)=$839
+    // RT60: VendorPricePerKit=$384, VialsPerKit=10, Cost_per_vial=$38.40, Single_Vial_Retail=round(38.40*2.5)=$96, Kit_Retail_A=round(384*2.5)=$960, Kit_Retail_B=round(96*10*0.975)=$936, Kit_Retail=min(960,936)=$936
+    { id: 3, name: 'Retatrutide', catNum: 'RT5-RT60', category: 'glp-1-agonists', price: { min: 25, max: 936 }, image: 'StockPhotos/Reta/Reta5mg.png', badge: 'Best Seller', popularity: 8,
       description: 'Next-generation triple-action peptide for cutting-edge metabolic research. GLP-1/GIP/Glucagon receptor triple agonist.',
       features: ['Triple receptor action', 'Premium quality', 'Latest innovation', 'Research grade'],
       defaultSize: 'RT5 - 5mg (1 vial) - Coming Soon', // Specify default size (5mg individual vial)
       sizes: [
-        { size: 'RT5 - 5mg (1 vial) - Coming Soon', price: 15, image: 'StockPhotos/Reta/Reta5mg.png', comingSoon: true, quantity: 1 },
-        { size: 'RT5 - 5mg, 10vial/kit', price: 98, image: 'StockPhotos/Reta/Reta5mgKit.png', quantity: 10 },
-        { size: 'RT10 - 10mg (1 vial) - Coming Soon', price: 20, image: 'StockPhotos/Reta/Reta10mg.png', comingSoon: true, quantity: 1 },
-        { size: 'RT10 - 10mg, 10vial/kit', price: 130, image: 'StockPhotos/Reta/Reta10mgKit.png', quantity: 10 },
-        { size: 'RT15 - 15mg (1 vial) - Coming Soon', price: 25, image: 'StockPhotos/Reta/Reta15mg.png', comingSoon: true, quantity: 1 },
-        { size: 'RT15 - 15mg, 10vial/kit', price: 158, image: 'StockPhotos/Reta/Reta15mgKit.png', quantity: 10 },
-        { size: 'RT20 - 20mg (1 vial) - Coming Soon', price: 30, image: 'StockPhotos/Reta/Reta20mg.png', comingSoon: true, quantity: 1 },
-        { size: 'RT20 - 20mg, 10vial/kit', price: 189, image: 'StockPhotos/Reta/Reta20mgKit.png', quantity: 10 },
-        { size: 'RT30 - 30mg (1 vial) - Coming Soon', price: 40, image: 'StockPhotos/Reta/Reta30mg.png', comingSoon: true, quantity: 1 },
-        { size: 'RT30 - 30mg, 10vial/kit', price: 245, image: 'StockPhotos/Reta/Reta30mgKit.png', quantity: 10 },
-        { size: 'RT50 - 50mg (1 vial) - Coming Soon', price: 55, image: 'StockPhotos/Reta/Reta50mg.png', comingSoon: true, quantity: 1 },
-        { size: 'RT50 - 50mg, 10vial/kit', price: 345, image: 'StockPhotos/Reta/Reta50mgKit.png', quantity: 10 },
-        { size: 'RT60 - 60mg (1 vial) - Coming Soon', price: 65, image: 'StockPhotos/Reta/Reta60mg.png', comingSoon: true, quantity: 1 },
-        { size: 'RT60 - 60mg, 10vial/kit', price: 384, image: 'StockPhotos/Reta/Reta60mgKit.png', quantity: 10 }
+        { size: 'RT5 - 5mg (1 vial) - Coming Soon', price: 25, image: 'StockPhotos/Reta/Reta5mg.png', comingSoon: true, quantity: 1 },
+        { size: 'RT5 - 5mg, 10vial/kit', price: 244, image: 'StockPhotos/Reta/Reta5mgKit.png', quantity: 10 },
+        { size: 'RT10 - 10mg (1 vial) - Coming Soon', price: 33, image: 'StockPhotos/Reta/Reta10mg.png', comingSoon: true, quantity: 1 },
+        { size: 'RT10 - 10mg, 10vial/kit', price: 322, image: 'StockPhotos/Reta/Reta10mgKit.png', quantity: 10 },
+        { size: 'RT15 - 15mg (1 vial) - Coming Soon', price: 40, image: 'StockPhotos/Reta/Reta15mg.png', comingSoon: true, quantity: 1 },
+        { size: 'RT15 - 15mg, 10vial/kit', price: 390, image: 'StockPhotos/Reta/Reta15mgKit.png', quantity: 10 },
+        { size: 'RT20 - 20mg (1 vial) - Coming Soon', price: 47, image: 'StockPhotos/Reta/Reta20mg.png', comingSoon: true, quantity: 1 },
+        { size: 'RT20 - 20mg, 10vial/kit', price: 458, image: 'StockPhotos/Reta/Reta20mgKit.png', quantity: 10 },
+        { size: 'RT30 - 30mg (1 vial) - Coming Soon', price: 61, image: 'StockPhotos/Reta/Reta30mg.png', comingSoon: true, quantity: 1 },
+        { size: 'RT30 - 30mg, 10vial/kit', price: 595, image: 'StockPhotos/Reta/Reta30mgKit.png', quantity: 10 },
+        { size: 'RT50 - 50mg (1 vial) - Coming Soon', price: 86, image: 'StockPhotos/Reta/Reta50mg.png', comingSoon: true, quantity: 1 },
+        { size: 'RT50 - 50mg, 10vial/kit', price: 839, image: 'StockPhotos/Reta/Reta50mgKit.png', quantity: 10 },
+        { size: 'RT60 - 60mg (1 vial) - Coming Soon', price: 96, image: 'StockPhotos/Reta/Reta60mg.png', comingSoon: true, quantity: 1 },
+        { size: 'RT60 - 60mg, 10vial/kit', price: 936, image: 'StockPhotos/Reta/Reta60mgKit.png', quantity: 10 }
       ],
       note: 'For advanced research purposes only.' },
 
     // BPC-157 Series (moved to position 4 - second row)
-    { id: 4, name: 'BPC-157', catNum: 'BC5-BC10', category: 'healing-peptides', price: { min: 640, max: 850 }, image: 'StockPhotos/BPC-157/BC5.png', badge: 'Healing', popularity: 10,
+    { id: 4, name: 'BPC-157', catNum: 'BC5-BC10', category: 'healing-peptides', price: { min: 16, max: 205 }, image: 'StockPhotos/BPC-157/BC5.png', badge: 'Healing', popularity: 10,
       description: 'Body Protection Compound for tissue repair and regeneration research. Derived from human gastric juice protective protein.',
       features: ['Tissue repair', 'High stability', 'Research proven', 'Synthetic peptide'],
       defaultSize: 'BC5 - 5mg (1 vial) - Coming Soon', // Specify default size (5mg individual vial)
       sizes: [
-        { size: 'BC5 - 5mg (1 vial) - Coming Soon', price: 12, image: 'StockPhotos/BPC-157/BC5.png', comingSoon: true, quantity: 1 },
-        { size: 'BC5 - 5mg, 10vial/kit', price: 64, image: 'StockPhotos/BPC-157/BPC5mgKit.png', quantity: 10 },
-        { size: 'BC10 - 10mg (1 vial) - Coming Soon', price: 16, image: 'StockPhotos/BPC-157/BC10.png', comingSoon: true, quantity: 1 },
-        { size: 'BC10 - 10mg, 10vial/kit', price: 85, image: 'StockPhotos/BPC-157/BPC10mgKit.png', quantity: 10 }
+        { size: 'BC5 - 5mg (1 vial) - Coming Soon', price: 16, image: 'StockPhotos/BPC-157/BC5.png', comingSoon: true, quantity: 1 },
+        { size: 'BC5 - 5mg, 10vial/kit', price: 156, image: 'StockPhotos/BPC-157/BPC5mgKit.png', quantity: 10 },
+        { size: 'BC10 - 10mg (1 vial) - Coming Soon', price: 21, image: 'StockPhotos/BPC-157/BC10.png', comingSoon: true, quantity: 1 },
+        { size: 'BC10 - 10mg, 10vial/kit', price: 205, image: 'StockPhotos/BPC-157/BPC10mgKit.png', quantity: 10 }
       ],
       note: 'Laboratory research compound only.' },
 
 
 
     // Ipamorelin
-    { id: 9, name: 'Ipamorelin', catNum: 'IP5-IP10', category: 'growth-hormones', price: { min: 305, max: 465 }, image: 'StockPhotos/Ipa/Ipa5mg.png', badge: 'Growth', popularity: 7,
+    { id: 9, name: 'Ipamorelin', catNum: 'IP5-IP10', category: 'growth-hormones', price: { min: 15, max: 224 }, image: 'StockPhotos/Ipa/Ipa5mg.png', badge: 'Growth', popularity: 7,
       description: 'Selective growth hormone releasing peptide for research. GHRP with minimal side effect profile.',
       features: ['Selective GHRP', 'Minimal side effects', 'Research proven', 'High purity'],
       defaultSize: 'IP5 - 5mg, 10vial/kit', // Specify default size (5mg kit)
       sizes: [
-        { size: 'IP5 - 5mg (1 vial) - Coming Soon', price: 31, image: 'StockPhotos/Ipa/Ipa5mg.png', comingSoon: true, quantity: 1 },
-        { size: 'IP5 - 5mg, 10vial/kit', price: 305, image: 'StockPhotos/Ipa/Ipamorelin5mgKit.png', quantity: 10 },
-        { size: 'IP10 - 10mg (1 vial) - Coming Soon', price: 47, image: 'StockPhotos/Ipa/Ipa10mg.png', comingSoon: true, quantity: 1 },
-        { size: 'IP10 - 10mg, 10vial/kit', price: 465, image: 'StockPhotos/Ipa/Ipamorelin10mgKit.png', quantity: 10 }
+        { size: 'IP5 - 5mg (1 vial) - Coming Soon', price: 15, image: 'StockPhotos/Ipa/Ipa5mg.png', comingSoon: true, quantity: 1 },
+        { size: 'IP5 - 5mg, 10vial/kit', price: 146, image: 'StockPhotos/Ipa/Ipamorelin5mgKit.png', quantity: 10 },
+        { size: 'IP10 - 10mg (1 vial) - Coming Soon', price: 23, image: 'StockPhotos/Ipa/Ipa10mg.png', comingSoon: true, quantity: 1 },
+        { size: 'IP10 - 10mg, 10vial/kit', price: 224, image: 'StockPhotos/Ipa/Ipamorelin10mgKit.png', quantity: 10 }
       ],
       note: 'For research purposes only.' },
 
     // CJC-1295
-    { id: 10, name: 'CJC-1295 NO DAC', catNum: 'CND5-CND10', category: 'growth-hormones', price: { min: 960, max: 1980 }, image: 'StockPhotos/CJCNo/CJCNo5mg.png', badge: 'Growth', popularity: 6,
+    { id: 10, name: 'CJC-1295 NO DAC', catNum: 'CND5-CND10', category: 'growth-hormones', price: { min: 24, max: 488 }, image: 'StockPhotos/CJCNo/CJCNo5mg.png', badge: 'Growth', popularity: 6,
       description: 'Growth hormone releasing hormone analog for research. Modified GHRH with enhanced stability.',
       features: ['No DAC version', 'Flexible dosing', 'Research grade', 'High quality'],
       defaultSize: 'CND5 - 5mg (1 vial) - Coming Soon', // Specify default size (5mg individual vial)
       sizes: [
-        { size: 'CND5 - 5mg (1 vial) - Coming Soon', price: 49, image: 'StockPhotos/CJCNo/CJCNo5mg.png', comingSoon: true, quantity: 1 },
-        { size: 'CND5 - 5mg, 10vial/kit', price: 485, image: 'StockPhotos/CJCNo/CJC5gmKitNo.png', quantity: 10 },
-        { size: 'CND10 - 10mg (1 vial) - Coming Soon', price: 100, image: 'StockPhotos/CJCNo/CJCNo10mg.png', comingSoon: true, quantity: 1 },
-        { size: 'CND10 - 10mg, 10vial/kit', price: 995, image: 'StockPhotos/CJCNo/CJC10mgKitNo.png', quantity: 10 }
+        { size: 'CND5 - 5mg (1 vial) - Coming Soon', price: 24, image: 'StockPhotos/CJCNo/CJCNo5mg.png', comingSoon: true, quantity: 1 },
+        { size: 'CND5 - 5mg, 10vial/kit', price: 234, image: 'StockPhotos/CJCNo/CJC5gmKitNo.png', quantity: 10 },
+        { size: 'CND10 - 10mg (1 vial) - Coming Soon', price: 50, image: 'StockPhotos/CJCNo/CJCNo10mg.png', comingSoon: true, quantity: 1 },
+        { size: 'CND10 - 10mg, 10vial/kit', price: 488, image: 'StockPhotos/CJCNo/CJC10mgKitNo.png', quantity: 10 }
       ],
       note: 'Research applications only.' },
 
-    // CJC-1295 WITH DAC
-    { id: 62, name: 'CJC-1295 WITH DAC', catNum: 'CD5', category: 'growth-hormones', price: { min: 825, max: 825 }, image: 'StockPhotos/CJCW/CJC5mg.png', badge: 'Growth', popularity: 8,
+    // CJC-1295 WITH DAC Pricing Formula Applied:
+    // CD5: VendorPricePerKit=$188, VialsPerKit=10, Cost_per_vial=$18.80, Single_Vial_Retail=round(18.80*2.5)=$47, Kit_Retail_A=round(188*2.5)=$470, Kit_Retail_B=round(47*10*0.975)=$458, Kit_Retail=min(470,458)=$458
+    { id: 62, name: 'CJC-1295 WITH DAC', catNum: 'CD5', category: 'growth-hormones', price: { min: 47, max: 458 }, image: 'StockPhotos/CJCW/CJC5mg.png', badge: 'Growth', popularity: 8,
       description: 'Long-acting growth hormone releasing hormone analog for research. DAC modification provides extended half-life.',
       features: ['Extended half-life', 'DAC modification', 'Research grade', 'High purity'],
       defaultSize: 'CWD5 - 5mg (1 vial) - Coming Soon', // Specify default size (5mg individual vial)
       sizes: [
-        { size: 'CWD5 - 5mg (1 vial) - Coming Soon', price: 83, comingSoon: true, quantity: 1 },
-        { size: 'CWD5 - 5mg, 10vial/kit', price: 825, quantity: 10 }
+        { size: 'CWD5 - 5mg (1 vial) - Coming Soon', price: 47, comingSoon: true, quantity: 1 },
+        { size: 'CWD5 - 5mg, 10vial/kit', price: 458, quantity: 10 }
       ],
       note: 'For research purposes only.' },
 
     // NAD+ Products
-    { id: 11, name: 'NAD+', catNum: 'NJ100-NJ500', category: 'longevity', price: { min: 630, max: 1030 }, image: 'StockPhotos/NAD/NAD100.png', badge: 'Longevity', popularity: 7,
+    { id: 11, name: 'NAD+', catNum: 'NJ100-NJ500', category: 'longevity', price: { min: 16, max: 254 }, image: 'StockPhotos/NAD/NAD100.png', badge: 'Longevity', popularity: 7,
       description: 'Nicotinamide adenine dinucleotide for cellular energy research. Essential coenzyme for metabolic studies.',
       features: ['Cellular energy', 'Anti-aging research', 'High purity', 'Research grade'],
       defaultSize: 'NJ100 - 100mg (1 vial) - Coming Soon', // Specify default size (100mg individual vial)
       sizes: [
-        { size: 'NJ100 - 100mg (1 vial) - Coming Soon', price: 32, image: 'StockPhotos/NAD/NAD100.png', comingSoon: true, quantity: 1 },
-        { size: 'NJ100 - 100mg, 10vial/kit', price: 315, image: 'StockPhotos/NAD/NAD100mgKit.png', quantity: 10 },
-        { size: 'NJ500 - 500mg (1 vial) - Coming Soon', price: 52, image: 'StockPhotos/NAD/NAD500.png', comingSoon: true, quantity: 1 },
-        { size: 'NJ500 - 500mg, 10vial/kit', price: 515, image: 'StockPhotos/NAD/NAD500mgKit.png', quantity: 10 }
+        { size: 'NJ100 - 100mg (1 vial) - Coming Soon', price: 16, image: 'StockPhotos/NAD/NAD100.png', comingSoon: true, quantity: 1 },
+        { size: 'NJ100 - 100mg, 10vial/kit', price: 156, image: 'StockPhotos/NAD/NAD100mgKit.png', quantity: 10 },
+        { size: 'NJ500 - 500mg (1 vial) - Coming Soon', price: 26, image: 'StockPhotos/NAD/NAD500.png', comingSoon: true, quantity: 1 },
+        { size: 'NJ500 - 500mg, 10vial/kit', price: 254, image: 'StockPhotos/NAD/NAD500mgKit.png', quantity: 10 }
       ],
       note: 'Laboratory research only.' },
 
 
 
     // Glutathione
-    { id: 13, name: 'Glutathione', catNum: 'GTT', category: 'longevity', price: { min: 930, max: 930 }, image: 'StockPhotos/Gluta/CD5mg.png', badge: 'Longevity', popularity: 6,
+    { id: 13, name: 'Glutathione', catNum: 'GTT', category: 'longevity', price: { min: 23, max: 224 }, image: 'StockPhotos/Gluta/CD5mg.png', badge: 'Longevity', popularity: 6,
       description: 'Master antioxidant for cellular protection research. Tripeptide essential for oxidative stress studies.',
       features: ['Master antioxidant', 'Cellular protection', 'Research grade', 'High purity'],
       defaultSize: 'GTT - 1500mg (1 vial) - Coming Soon', // Specify default size (1500mg individual vial)
       sizes: [
-        { size: 'GTT - 1500mg (1 vial) - Coming Soon', price: 93, image: 'StockPhotos/Gluta/CD5mg.png', comingSoon: true, quantity: 1 },
-        { size: 'GTT - 1500mg, 10vial/kit', price: 930, image: 'StockPhotos/Gluta/Glutathione1500mgKit.png', quantity: 10 }
+        { size: 'GTT - 1500mg (1 vial) - Coming Soon', price: 23, image: 'StockPhotos/Gluta/CD5mg.png', comingSoon: true, quantity: 1 },
+        { size: 'GTT - 1500mg, 10vial/kit', price: 224, image: 'StockPhotos/Gluta/Glutathione1500mgKit.png', quantity: 10 }
       ],
       note: 'For research purposes only.' },
 
     // Water Products
-    { id: 14, name: 'BAC Water', catNum: 'BA3-BA10', category: 'liquids', price: { min: 250, max: 300 }, image: 'StockPhotos/BAC/BAC3ML.png', badge: 'Essential', popularity: 9,
+    { id: 14, name: 'BAC Water', catNum: 'BA3-BA10', category: 'liquids', price: { min: 6, max: 73 }, image: 'StockPhotos/BAC/BAC3ML.png', badge: 'Essential', popularity: 9,
       description: 'Bacteriostatic water for peptide reconstitution. 0.9% Benzyl Alcohol preservative for multi-dose use.',
       features: ['0.9% Benzyl alcohol', 'Sterile', 'Research grade', 'Multi-dose'],
       defaultSize: 'BA3 - 3ml (1 vial) - Coming Soon', // Specify default size (3ml individual vial)
       sizes: [
-        { size: 'BA3 - 3ml (1 vial) - Coming Soon', price: 5, image: 'StockPhotos/BAC/BAC3ML.png', comingSoon: true, quantity: 1 },
-        { size: 'BA3 - 3ml, 10vial/kit', price: 25, image: 'StockPhotos/BAC/Bac3mlKit.png', quantity: 10 },
+        { size: 'BA3 - 3ml (1 vial) - Coming Soon', price: 6, image: 'StockPhotos/BAC/BAC3ML.png', comingSoon: true, quantity: 1 },
+        { size: 'BA3 - 3ml, 10vial/kit', price: 61, image: 'StockPhotos/BAC/Bac3mlKit.png', quantity: 10 },
         { size: 'BA10 - 10ml (1 vial) - Coming Soon', price: 8, image: 'StockPhotos/BAC/BAC10ML.png', comingSoon: true, quantity: 1 },
-        { size: 'BA10 - 10ml, 10vial/kit', price: 30, image: 'StockPhotos/BAC/Bac10mlKit.png', quantity: 10 }
+        { size: 'BA10 - 10ml, 10vial/kit', price: 73, image: 'StockPhotos/BAC/Bac10mlKit.png', quantity: 10 }
       ],
       note: 'For research reconstitution only.' },
 
 
 
     // 5-Amino-1MQ
-    { id: 16, name: '5-Amino-1MQ', catNum: '5AM', category: 'metabolic', price: { min: 900, max: 900 }, image: 'StockPhotos/5-Amino/5amino5mg.png', badge: 'Metabolic', popularity: 6,
+    { id: 16, name: '5-Amino-1MQ', catNum: '5AM', category: 'metabolic', price: { min: 22, max: 214 }, image: 'StockPhotos/5-Amino/5amino5mg.png', badge: 'Metabolic', popularity: 6,
       description: 'NNMT inhibitor for metabolic research. Small molecule compound for cellular metabolism studies.',
       features: ['NNMT inhibitor', 'Metabolic research', 'Research grade', 'High purity'],
       defaultSize: '5AM - 5mg (1 vial) - Coming Soon', // Specify default size (5mg individual vial)
       sizes: [
-        { size: '5AM - 5mg (1 vial) - Coming Soon', price: 90, image: 'StockPhotos/5-Amino/5amino5mg.png', comingSoon: true, quantity: 1 },
-        { size: '5AM - 5mg, 10vial/kit', price: 900, image: 'StockPhotos/5-Amino/5-amino5mgKit.png', quantity: 10 }
+        { size: '5AM - 5mg (1 vial) - Coming Soon', price: 22, image: 'StockPhotos/5-Amino/5amino5mg.png', comingSoon: true, quantity: 1 },
+        { size: '5AM - 5mg, 10vial/kit', price: 214, image: 'StockPhotos/5-Amino/5-amino5mgKit.png', quantity: 10 }
       ],
       note: 'Laboratory research only.' },
 
@@ -151,15 +160,15 @@ const products = [
 
 
     // Sermorelin
-    { id: 18, name: 'Sermorelin Acetate', catNum: 'SMO5-SMO10', category: 'growth-hormones', price: { min: 910, max: 1430 }, image: 'StockPhotos/Seromo/Seromo5mg.png', badge: 'Growth', popularity: 6,
+    { id: 18, name: 'Sermorelin Acetate', catNum: 'SMO5-SMO10', category: 'growth-hormones', price: { min: 23, max: 351 }, image: 'StockPhotos/Seromo/Seromo5mg.png', badge: 'Growth', popularity: 6,
       description: 'Growth hormone releasing hormone for research applications. 29 amino acid GHRH fragment.',
       features: ['GHRH fragment', 'Research grade', 'High purity', 'Acetate salt'],
       defaultSize: 'SMO5 - 5mg (1 vial) - Coming Soon', // Specify default size (5mg individual vial)
       sizes: [
-        { size: 'SMO5 - 5mg (1 vial) - Coming Soon', price: 91, image: 'StockPhotos/Seromo/Seromo5mg.png', comingSoon: true, quantity: 1 },
-        { size: 'SMO5 - 5mg, 10vial/kit', price: 910, image: 'StockPhotos/Seromo/SermorelinAcetate5mgKit.png', quantity: 10 },
-        { size: 'SMO10 - 10mg (1 vial) - Coming Soon', price: 143, image: 'StockPhotos/Seromo/Seromo10mg.png', comingSoon: true, quantity: 1 },
-        { size: 'SMO10 - 10mg, 10vial/kit', price: 1430, image: 'StockPhotos/Seromo/SermorelinAcetate10mgKit.png', quantity: 10 }
+        { size: 'SMO5 - 5mg (1 vial) - Coming Soon', price: 23, image: 'StockPhotos/Seromo/Seromo5mg.png', comingSoon: true, quantity: 1 },
+        { size: 'SMO5 - 5mg, 10vial/kit', price: 224, image: 'StockPhotos/Seromo/SermorelinAcetate5mgKit.png', quantity: 10 },
+        { size: 'SMO10 - 10mg (1 vial) - Coming Soon', price: 36, image: 'StockPhotos/Seromo/Seromo10mg.png', comingSoon: true, quantity: 1 },
+        { size: 'SMO10 - 10mg, 10vial/kit', price: 351, image: 'StockPhotos/Seromo/SermorelinAcetate10mgKit.png', quantity: 10 }
       ],
       note: 'Laboratory research only.' },
 
@@ -167,20 +176,20 @@ const products = [
 
 
     // Epitalon
-    { id: 20, name: 'Epitalon', catNum: 'ET10-ET50', category: 'longevity', price: { min: 700, max: 1730 }, image: 'StockPhotos/Epi/Epi10mg.png', badge: 'Longevity', popularity: 6,
+    { id: 20, name: 'Epitalon', catNum: 'ET10-ET50', category: 'longevity', price: { min: 18, max: 419 }, image: 'StockPhotos/Epi/Epi10mg.png', badge: 'Longevity', popularity: 6,
       description: 'Tetrapeptide for longevity and aging research. Telomere length and cellular aging studies.',
       features: ['Longevity research', 'Telomere studies', 'Research grade', 'High purity'],
       defaultSize: 'ET10 - 10mg (1 vial) - Coming Soon', // Specify default size (10mg individual vial)
       sizes: [
-        { size: 'ET10 - 10mg (1 vial) - Coming Soon', price: 70, image: 'StockPhotos/Epi/Epi10mg.png', comingSoon: true, quantity: 1 },
-        { size: 'ET10 - 10mg, 10vial/kit', price: 700, image: 'StockPhotos/Epi/Epitalon10mgKit.png', quantity: 10 },
-        { size: 'ET50 - 50mg (1 vial) - Coming Soon', price: 173, image: 'StockPhotos/Epi/Epi50mg.png', comingSoon: true, quantity: 1 },
-        { size: 'ET50 - 50mg, 10vial/kit', price: 1730, image: 'StockPhotos/Epi/Epitalon50mgKit.png', quantity: 10 }
+        { size: 'ET10 - 10mg (1 vial) - Coming Soon', price: 18, image: 'StockPhotos/Epi/Epi10mg.png', comingSoon: true, quantity: 1 },
+        { size: 'ET10 - 10mg, 10vial/kit', price: 176, image: 'StockPhotos/Epi/Epitalon10mgKit.png', quantity: 10 },
+        { size: 'ET50 - 50mg (1 vial) - Coming Soon', price: 43, image: 'StockPhotos/Epi/Epi50mg.png', comingSoon: true, quantity: 1 },
+        { size: 'ET50 - 50mg, 10vial/kit', price: 419, image: 'StockPhotos/Epi/Epitalon50mgKit.png', quantity: 10 }
       ],
       note: 'For research purposes only.' },
 
     // TB-500 Series (moved to end)
-    { id: 21, name: 'TB-500', catNum: 'BT5-BT10', category: 'healing-peptides', price: { min: 455, max: 780 }, image: 'StockPhotos/TB-500/TB5mg.png', badge: 'Healing', popularity: 8,
+    { id: 21, name: 'TB-500', catNum: 'BT5-BT10', category: 'healing-peptides', price: { min: 46, max: 780 }, image: 'StockPhotos/TB-500/TB5mg.png', badge: 'Healing', popularity: 8,
       description: 'Thymosin Beta-4 fragment for advanced tissue development research. Promotes cell migration and wound healing studies.',
       features: ['Tissue development', 'Research grade', 'High purity', 'Quality assured'],
       defaultSize: 'BT5 - 5mg, 10vial/kit', // Specify default size (5mg kit)
@@ -194,82 +203,91 @@ const products = [
 
 
     // Selank
-    { id: 23, name: 'Selank', catNum: 'SK5-SK10', category: 'neurohormones', price: { min: 62, max: 880 }, image: 'StockPhotos/Selank/Selank5mg.png', badge: 'Cognitive', popularity: 6,
+    { id: 23, name: 'Selank', catNum: 'SK5-SK10', category: 'neurohormones', price: { min: 16, max: 214 }, image: 'StockPhotos/Selank/Selank5mg.png', badge: 'Cognitive', popularity: 6,
       description: 'Synthetic tuftsin analog for cognitive research. Anxiolytic and nootropic peptide studies.',
       features: ['Cognitive research', 'Anxiolytic studies', 'Research grade', 'Synthetic analog'],
       defaultSize: 'SK5 - 5mg (1 vial) - Coming Soon', // Specify default size (5mg individual vial)
       sizes: [
-        { size: 'SK5 - 5mg (1 vial) - Coming Soon', price: 62, image: 'StockPhotos/Selank/Selank5mg.png', comingSoon: true, quantity: 1 },
-        { size: 'SK5 - 5mg, 10vial/kit', price: 620, image: 'StockPhotos/Selank/Selank5mgKit (2).png', quantity: 10 },
-        { size: 'SK10 - 10mg (1 vial) - Coming Soon', price: 88, image: 'StockPhotos/Selank/Selank10mg.png', comingSoon: true, quantity: 1 },
-        { size: 'SK10 - 10mg, 10vial/kit', price: 880, image: 'StockPhotos/Selank/Selank10mgKit (3).png', quantity: 10 }
+        { size: 'SK5 - 5mg (1 vial) - Coming Soon', price: 16, image: 'StockPhotos/Selank/Selank5mg.png', comingSoon: true, quantity: 1 },
+        { size: 'SK5 - 5mg, 10vial/kit', price: 156, image: 'StockPhotos/Selank/Selank5mgKit (2).png', quantity: 10 },
+        { size: 'SK10 - 10mg (1 vial) - Coming Soon', price: 22, image: 'StockPhotos/Selank/Selank10mg.png', comingSoon: true, quantity: 1 },
+        { size: 'SK10 - 10mg, 10vial/kit', price: 214, image: 'StockPhotos/Selank/Selank10mgKit (3).png', quantity: 10 }
       ],
       note: 'For research purposes only.' },
 
     // Semax
-    { id: 24, name: 'Semax', catNum: 'XA5-XA10', category: 'neurohormones', price: { min: 530, max: 830 }, image: 'StockPhotos/Semax/Semax5mg.png', badge: 'Cognitive', popularity: 6,
+    { id: 24, name: 'Semax', catNum: 'XA5-XA10', category: 'neurohormones', price: { min: 13, max: 205 }, image: 'StockPhotos/Semax/Semax5mg.png', badge: 'Cognitive', popularity: 6,
       description: 'ACTH analog for cognitive enhancement research. Nootropic peptide for neurological studies.',
       features: ['Cognitive enhancement', 'Neurological research', 'ACTH analog', 'Research grade'],
       defaultSize: 'XA5 - 5mg (1 vial) - Coming Soon', // Specify default size (5mg individual vial)
       sizes: [
-        { size: 'XA5 - 5mg (1 vial) - Coming Soon', price: 53, image: 'StockPhotos/Semax/Semax5mg.png', comingSoon: true, quantity: 1 },
-        { size: 'XA5 - 5mg, 10vial/kit', price: 530, image: 'StockPhotos/Semax/Semax5mgKit.png', quantity: 10 },
-        { size: 'XA10 - 10mg (1 vial) - Coming Soon', price: 83, image: 'StockPhotos/Semax/Semax10mg.png', comingSoon: true, quantity: 1 },
-        { size: 'XA10 - 10mg, 10vial/kit', price: 830, image: 'StockPhotos/Semax/Semax10mgKit.png', quantity: 10 }
+        { size: 'XA5 - 5mg (1 vial) - Coming Soon', price: 13, image: 'StockPhotos/Semax/Semax5mg.png', comingSoon: true, quantity: 1 },
+        { size: 'XA5 - 5mg, 10vial/kit', price: 127, image: 'StockPhotos/Semax/Semax5mgKit.png', quantity: 10 },
+        { size: 'XA10 - 10mg (1 vial) - Coming Soon', price: 21, image: 'StockPhotos/Semax/Semax10mg.png', comingSoon: true, quantity: 1 },
+        { size: 'XA10 - 10mg, 10vial/kit', price: 205, image: 'StockPhotos/Semax/Semax10mgKit.png', quantity: 10 }
       ],
       note: 'For research purposes only.' },
 
 
 
     // GHK-Cu
-    { id: 28, name: 'GHK-Cu', catNum: 'CU50-CU100', category: 'healing-peptides', price: { min: 63, max: 1425 }, image: 'StockPhotos/GHK/Gk50mg.png', badge: 'Healing', popularity: 7,
+    { id: 28, name: 'GHK-Cu', catNum: 'CU50-CU100', category: 'healing-peptides', price: { min: 18, max: 351 }, image: 'StockPhotos/GHK/Gk50mg.png', badge: 'Healing', popularity: 7,
       description: 'Copper peptide for tissue repair research. Wound healing and anti-aging studies.',
       features: ['Tissue repair', 'Copper complex', 'Anti-aging research', 'Wound healing'],
       defaultSize: 'GHK50 - 50mg (1 vial) - Coming Soon', // Specify default size (50mg individual vial)
       sizes: [
-        { size: 'GHK50 - 50mg (1 vial) - Coming Soon', price: 63, image: 'StockPhotos/GHK/Gk50mg.png', comingSoon: true, quantity: 1 },
-        { size: 'GHK50 - 50mg, 10vial/kit', price: 625, image: 'StockPhotos/GHK/GHK50mgKit.png', quantity: 10 },
-        { size: 'GHK100 - 100mg (1 vial) - Coming Soon', price: 143, image: 'StockPhotos/GHK/GHK100mg.png', comingSoon: true, quantity: 1 },
-        { size: 'GHK100 - 100mg, 10vial/kit', price: 1425, image: 'StockPhotos/GHK/GHK100mgKit.png', quantity: 10 }
+        { size: 'GHK50 - 50mg (1 vial) - Coming Soon', price: 18, image: 'StockPhotos/GHK/Gk50mg.png', comingSoon: true, quantity: 1 },
+        { size: 'GHK50 - 50mg, 10vial/kit', price: 176, image: 'StockPhotos/GHK/GHK50mgKit.png', quantity: 10 },
+        { size: 'GHK100 - 100mg (1 vial) - Coming Soon', price: 36, image: 'StockPhotos/GHK/GHK100mg.png', comingSoon: true, quantity: 1 },
+        { size: 'GHK100 - 100mg, 10vial/kit', price: 351, image: 'StockPhotos/GHK/GHK100mgKit.png', quantity: 10 }
       ],
       note: 'For research purposes only.' },
 
     // GHRP-6
-    { id: 29, name: 'GHRP-6', catNum: 'G65-G610', category: 'growth-hormones', price: { min: 730, max: 780 }, image: 'StockPhotos/GHRP/GHRP5mg.png', badge: 'Growth', popularity: 6,
+    { id: 29, name: 'GHRP-6', catNum: 'G65-G610', category: 'growth-hormones', price: { min: 18, max: 195 }, image: 'StockPhotos/GHRP/GHRP5mg.png', badge: 'Growth', popularity: 6,
       description: 'Growth hormone releasing peptide for GH research. Hexapeptide growth hormone secretagogue.',
       features: ['GH release', 'Hexapeptide', 'Growth research', 'Research grade'],
       defaultSize: 'G65 - 5mg (1 vial) - Coming Soon', // Specify default size (5mg individual vial)
       sizes: [
-        { size: 'G65 - 5mg (1 vial) - Coming Soon', price: 78, image: 'StockPhotos/GHRP/GHRP5mg.png', comingSoon: true, quantity: 1 },
-        { size: 'G65 - 5mg, 10vial/kit', price: 780, image: 'StockPhotos/GHRP/GHRP5mgKit.png', quantity: 10 },
-        { size: 'G610 - 10mg (1 vial) - Coming Soon', price: 73, image: 'StockPhotos/GHRP/GHRP10mg.png', comingSoon: true, quantity: 1 },
-        { size: 'G610 - 10mg, 10vial/kit', price: 730, image: 'StockPhotos/GHRP/GHRP10mgKit.png', quantity: 10 }
+        { size: 'G65 - 5mg (1 vial) - Coming Soon', price: 18, image: 'StockPhotos/GHRP/GHRP5mg.png', comingSoon: true, quantity: 1 },
+        { size: 'G65 - 5mg, 10vial/kit', price: 176, image: 'StockPhotos/GHRP/GHRP5mgKit.png', quantity: 10 },
+        { size: 'G610 - 10mg (1 vial) - Coming Soon', price: 20, image: 'StockPhotos/GHRP/GHRP10mg.png', comingSoon: true, quantity: 1 },
+        { size: 'G610 - 10mg, 10vial/kit', price: 195, image: 'StockPhotos/GHRP/GHRP10mgKit.png', quantity: 10 }
       ],
       note: 'For research purposes only.' },
 
 
 
     // Glow - Premium Healing Blend
-    { id: 63, name: 'Glow', catNum: 'BBG70', category: 'healing-peptides', price: { min: 218, max: 2180 }, image: 'StockPhotos/Glow/GLOW70mg.png', badge: 'Blend', popularity: 9,
+    { id: 63, name: 'Glow', catNum: 'BBG70', category: 'healing-peptides', price: { min: 55, max: 536 }, image: 'StockPhotos/Glow/GLOW70mg.png', badge: 'Blend', popularity: 9,
       description: 'Premium 3-peptide healing blend for comprehensive research. 70mg total per vial: BPC-157 10mg + GHK-CU 50mg + TB500 10mg.',
       features: ['3-peptide healing blend', 'BPC-157 10mg', 'GHK-CU 50mg + TB500 10mg', '70mg total per vial'],
       defaultSize: 'BBG70 - 70mg (1 vial) - Coming Soon', // Specify default size (70mg individual vial)
-      sizes: [
-        { size: 'BBG70 - 70mg (1 vial) - Coming Soon', price: 218, image: 'StockPhotos/Glow/GLOW70mg.png', comingSoon: true, quantity: 1 },
-        { size: 'BBG70 - 70mg, 10vial/kit', price: 2180, image: 'StockPhotos/Glow/GLOW70mgKit.png', quantity: 10 }
-      ],
+      // KEVIN'S PRICING FORMULA APPLIED:
+        // VendorPricePerKit = 218.00 (from Kevin's pricing)
+        // VialsPerKit = 10
+        // FACTOR_SINGLE = 2.5, FACTOR_KIT = 2.5, KIT_DISCOUNT = 0.025
+        // Cost_per_vial = 218 / 10 = 21.8
+        // Single_Vial_Retail = round(21.8 * 2.5) = 55
+        // Kit_Retail_candidate_A = round(218 * 2.5) = 545
+        // Kit_Retail_candidate_B = round(55 * 10 * 0.975) = 536
+        // Kit_Retail = min(545, 536) = 536
+        sizes: [
+          { size: 'BBG70 - 70mg (1 vial) - Coming Soon', price: 55, image: 'StockPhotos/Glow/GLOW70mg.png', comingSoon: true, quantity: 1 },
+          { size: 'BBG70 - 70mg, 10vial/kit', price: 536, image: 'StockPhotos/Glow/GLOW70mgKit.png', quantity: 10 }
+        ],
       note: '70mg breakdown: BPC-157 10mg + GHK-CU 50mg + TB500 10mg per vial. For research purposes only.' },
 
 
 
     // Melatonin (injectable)
-    { id: 34, name: 'Melatonin (Injectable)', catNum: 'MT1', category: 'neurohormones', price: { min: 730, max: 730 }, image: 'StockPhotos/Mela/Melatonin5mg.png', badge: 'Neurohormone', popularity: 6,
+    { id: 34, name: 'Melatonin (Injectable)', catNum: 'MT1', category: 'neurohormones', price: { min: 18, max: 176 }, image: 'StockPhotos/Mela/Melatonin5mg.png', badge: 'Neurohormone', popularity: 6,
       description: 'Injectable melatonin for circadian rhythm research. Sleep-wake cycle and chronobiology studies.',
       features: ['Circadian research', 'Sleep studies', 'Chronobiology', 'Injectable form'],
       defaultSize: 'MT1 - 5mg (1 vial) - Coming Soon', // Specify default size (5mg individual vial)
       sizes: [
-        { size: 'MT1 - 5mg (1 vial) - Coming Soon', price: 73, image: 'StockPhotos/Mela/Melatonin5mg.png', comingSoon: true, quantity: 1 },
-        { size: 'MT1 - 5mg, 10vial/kit', price: 730, image: 'StockPhotos/Mela/Mela5mgKit.png', quantity: 10 }
+        { size: 'MT1 - 5mg (1 vial) - Coming Soon', price: 18, image: 'StockPhotos/Mela/Melatonin5mg.png', comingSoon: true, quantity: 1 },
+        { size: 'MT1 - 5mg, 10vial/kit', price: 176, image: 'StockPhotos/Mela/Mela5mgKit.png', quantity: 10 }
       ],
       note: 'For research purposes only.' },
 
@@ -278,15 +296,15 @@ const products = [
 
 
     // Thymosin Alpha-1
-    { id: 43, name: 'Thymosin Alpha-1', catNum: 'TA5-TA10', category: 'longevity', price: { min: 1130, max: 1930 }, image: 'StockPhotos/Thymo/Thmosin5mg.png', badge: 'Longevity', popularity: 6,
+    { id: 43, name: 'Thymosin Alpha-1', catNum: 'TA5-TA10', category: 'longevity', price: { min: 28, max: 468 }, image: 'StockPhotos/Thymo/Thmosin5mg.png', badge: 'Longevity', popularity: 6,
       description: 'Thymosin peptide for immune research. T-cell function and immunotherapy studies.',
       features: ['Immune research', 'T-cell function', 'Immunotherapy', 'Research grade'],
       defaultSize: 'TA5 - 5mg (1 vial) - Coming Soon', // Specify default size (5mg individual vial)
       sizes: [
-        { size: 'TA5 - 5mg (1 vial) - Coming Soon', price: 113, image: 'StockPhotos/Thymo/Thmosin5mg.png', comingSoon: true, quantity: 1 },
-        { size: 'TA5 - 5mg, 10vial/kit', price: 1130, image: 'StockPhotos/Thymo/Thymosin5mgKit.png', quantity: 10 },
-        { size: 'TA10 - 10mg (1 vial) - Coming Soon', price: 193, image: 'StockPhotos/Thymo/Thymo10mg.png', comingSoon: true, quantity: 1 },
-        { size: 'TA10 - 10mg, 10vial/kit', price: 1930, image: 'StockPhotos/Thymo/Thymosin10mgKit.png', quantity: 10 }
+        { size: 'TA5 - 5mg (1 vial) - Coming Soon', price: 28, image: 'StockPhotos/Thymo/Thmosin5mg.png', comingSoon: true, quantity: 1 },
+        { size: 'TA5 - 5mg, 10vial/kit', price: 273, image: 'StockPhotos/Thymo/Thymosin5mgKit.png', quantity: 10 },
+        { size: 'TA10 - 10mg (1 vial) - Coming Soon', price: 48, image: 'StockPhotos/Thymo/Thymo10mg.png', comingSoon: true, quantity: 1 },
+        { size: 'TA10 - 10mg, 10vial/kit', price: 468, image: 'StockPhotos/Thymo/Thymosin10mgKit.png', quantity: 10 }
       ],
       note: 'For research purposes only.' },
 
@@ -1385,12 +1403,18 @@ const mainContent = document.getElementById('main-content');
 
 // Check if user has already seen the cinematic opening in this session
 const hasSeenOpening = sessionStorage.getItem('hasSeenCinematicOpening');
+const chatButton = document.getElementById('chat-button');
 
 // Only show splash screen if user hasn't seen it in this session
 if (videoSplash && !hasSeenOpening) {
     // Add splash-active class to body to prevent scrolling
     document.body.classList.add('splash-active');
     videoSplash.classList.add('active');
+    
+    // Hide chat button during cinematic opening
+    if (chatButton) {
+        chatButton.style.display = 'none';
+    }
     
     // Mark that user has seen the opening
     sessionStorage.setItem('hasSeenCinematicOpening', 'true');
@@ -1401,6 +1425,10 @@ if (videoSplash && !hasSeenOpening) {
     }
     if (mainContent) {
         mainContent.classList.remove('hidden');
+    }
+    // Show chat button if skipping opening
+    if (chatButton) {
+        chatButton.style.display = 'flex';
     }
 }
 
@@ -1437,6 +1465,12 @@ function transitionToMainContent() {
         setTimeout(() => {
             videoSplash.style.display = 'none';
             mainContent.classList.remove('hidden');
+            
+            // Show chat button when transitioning to main content
+            const chatButton = document.getElementById('chat-button');
+            if (chatButton) {
+                chatButton.style.display = 'flex';
+            }
         }, 500);
     }
 }
@@ -1775,5 +1809,82 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             }, 300);
         });
+    }
+    
+    // Chat functionality
+    const chatModal = document.getElementById('chat-modal');
+    const chatClose = document.getElementById('chat-close');
+    const chatForm = document.getElementById('chat-form');
+    
+    // Open chat modal
+    if (chatButton) {
+        chatButton.addEventListener('click', function() {
+            chatModal.classList.remove('hidden');
+        });
+    }
+    
+    // Close chat modal
+    if (chatClose) {
+        chatClose.addEventListener('click', function() {
+            chatModal.classList.add('hidden');
+        });
+    }
+    
+    // Close modal when clicking outside
+    if (chatModal) {
+        chatModal.addEventListener('click', function(e) {
+            if (e.target === chatModal) {
+                chatModal.classList.add('hidden');
+            }
+        });
+    }
+    
+    // Handle chat form submission
+    if (chatForm) {
+        chatForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const name = formData.get('name');
+            const email = formData.get('email');
+            const message = formData.get('message');
+            
+            // Create mailto link for Ionos email
+            const subject = encodeURIComponent(`Chat Message from ${name} - Schaw Peptide Labs`);
+            const body = encodeURIComponent(
+                `New chat message received:\n\n` +
+                `Name: ${name}\n` +
+                `Email: ${email}\n\n` +
+                `Message:\n${message}\n\n` +
+                `---\n` +
+                `This message was sent via the chat feature on Schaw Peptide Labs website.`
+            );
+            
+            // Use Ionos email address
+            const mailtoLink = `mailto:research@schawpeptidelabs.com?subject=${subject}&body=${body}`;
+            
+            // Open email client
+            window.location.href = mailtoLink;
+            
+            // Show success message
+            showToast('Email client opened! Please send the email to complete your message.', 'success');
+            
+            // Reset form and close modal
+            this.reset();
+            chatModal.classList.add('hidden');
+        });
+    }
+    
+    // Close modal with Escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && chatModal && !chatModal.classList.contains('hidden')) {
+            chatModal.classList.add('hidden');
+        }
+    });
+    
+    // Initialize chat modal as hidden
+    if (chatModal) {
+        chatModal.classList.add('hidden');
     }
 });

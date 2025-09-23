@@ -36,7 +36,7 @@
                     <li><a href="#products">Products</a></li>
                     <li><a href="#research">Research</a></li>
                     <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
+
                 </ul>
             </nav>
             <div class="header-actions">
@@ -137,7 +137,7 @@
                     <div class="comparison-card our-pricing">
                         <div class="card-header">
                             <h3>SchawPeptideLabs</h3>
-                            <div class="price-tag affordable">$76-384</div>
+                            <div class="price-tag affordable">$25-384</div>
                         </div>
                         <div class="card-content">
                             <p>Premium quality at affordable prices</p>
@@ -698,52 +698,7 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="content-section" style="display: none;">
-        <div class="container">
-            <div class="page-header">
-                <h2>Contact Us</h2>
-                <p>Get in touch with our research support team</p>
-            </div>
-            <div class="contact-content">
-                <div class="contact-form-section">
-                    <form class="contact-form">
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="institution">Institution/Company</label>
-                            <input type="text" id="institution" name="institution">
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="submit-btn">Send Message</button>
-                    </form>
-                </div>
-                <div class="contact-info-section">
-                    <div class="contact-details">
-                        <h3>Research Support</h3>
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <span>research@schawpeptidelabs.com</span>
-                        </div>
 
-                        <div class="contact-item">
-                            <i class="fas fa-clock"></i>
-                            <span>Mon-Fri 9AM-6PM EST</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Product Detail Section -->
     <section id="product-detail" class="product-detail-section" style="display: none;">
@@ -787,7 +742,7 @@
                     
                     <div class="product-pricing">
                         <div class="price-range">
-                            <span id="product-detail-price">$74.00 – $328.00</span>
+                            <span id="product-detail-price"></span>
                         </div>
                         
                         <div class="compliance-note">
@@ -1328,7 +1283,7 @@
                 <div class="footer-section">
                     <h4>Support</h4>
                     <ul>
-                        <li><a href="#contact" onclick="showSection('contact')">Contact Us</a></li>
+        
                         <li><a href="#terms" onclick="showSection('terms')">Terms of Service</a></li>
                         <li><a href="#privacy" onclick="showSection('privacy')">Privacy Policy</a></li>
                     </ul>
@@ -1338,7 +1293,7 @@
                     <div class="contact-info">
                         <p><i class="fas fa-envelope"></i> research@schawpeptidelabs.com</p>
 
-                        <p><i class="fas fa-clock"></i> Mon-Fri 9AM-6PM EST</p>
+                        <p><i class="fas fa-envelope"></i> invoice@schawpeptidelabs.com</p>
                     </div>
                 </div>
             </div>
@@ -1411,6 +1366,38 @@
         </div>
     </div>
     </div> <!-- End Main Content -->
+
+    <!-- Floating Chat Button -->
+    <div id="chat-button" class="chat-button">
+        <img src="Logo.png" alt="Chat" class="chat-logo">
+    </div>
+
+    <!-- Chat Modal -->
+    <div id="chat-modal" class="chat-modal hidden">
+        <div class="chat-modal-content">
+            <div class="chat-header">
+                <h3>Contact Support</h3>
+                <button id="chat-close" class="chat-close">&times;</button>
+            </div>
+            <div class="chat-body">
+                <form id="chat-form" class="chat-form">
+                    <div class="form-group">
+                        <label for="chat-name">Name</label>
+                        <input type="text" id="chat-name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="chat-email">Email</label>
+                        <input type="email" id="chat-email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="chat-message">Message</label>
+                        <textarea id="chat-message" name="message" rows="4" required placeholder="How can we help you?"></textarea>
+                    </div>
+                    <button type="submit" class="chat-submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
