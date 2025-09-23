@@ -1,0 +1,1479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SchawPeptideLabs - Premium Research Peptides</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="Logo.png" alt="SchawLabs Logo" class="logo-image">
+                <div class="logo-text">
+                    <h1>SchawLabs</h1>
+                    <span class="tagline">Research Excellence</span>
+                </div>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#research">Research</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <div class="search-box">
+                    <input type="text" id="search-input" placeholder="Search products..." autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" name="search-query-unique-name">
+                    <i class="fas fa-search"></i>
+                    <div class="search-dropdown" id="search-dropdown"></div>
+                </div>
+                <div class="cart" onclick="showSection('cart')">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home" class="home-section active">
+        <div class="container">
+            <!-- Hero Section -->
+            <section class="hero">
+                <div class="container">
+                    <div class="hero-content">
+                        <div class="hero-main-text">
+                            <h1 class="hero-title">
+                                <span class="title-main">UNLOCK THE POWER</span>
+                                <span class="title-sub">with high quality peptides!</span>
+                            </h1>
+                        </div>
+                        
+                        <div class="hero-features">
+                            <div class="feature-highlight">
+                                <h2>THIRD PARTY TESTED TO ENSURE</h2>
+                                <h3>ACCURATE AND PRECISE</h3>
+                                <h3>RESEARCH-ONLY PEPTIDES</h3>
+                            </div>
+                        </div>
+                        
+                        <div class="hero-action">
+                            <button class="shop-now-btn" onclick="showProducts('all')">
+                                SHOP NOW
+                            </button>
+                        </div>
+                        
+                        <div class="quality-badges">
+                            <div class="badge-item">
+                                <i class="fas fa-certificate"></i>
+                                <span>99.9% Purity</span>
+                            </div>
+                            <div class="badge-item">
+                                <i class="fas fa-flask"></i>
+                                <span>Lab Tested</span>
+                            </div>
+                            <div class="badge-item">
+                                <i class="fas fa-shipping-fast"></i>
+                                <span>Fast Shipping</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-product">
+                        <div class="product-spotlight">
+                            <div class="product-glow"></div>
+                            <img class="hero-product-image" src="Gemini_Generated_Image_st5qv3st5qv3st5q.png" alt="SchawPeptideLabs GLP-3 RT - Premium Research Peptide">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Affordable Access Section -->
+            <section class="affordable-access-section">
+                <div class="affordable-header">
+                    <h2>Affordable Access to Premium Peptides</h2>
+                    <p>We believe quality research shouldn't break the bank. While other peptide companies charge ridiculous prices, SchawPeptideLabs partners with reputable vendors to bring you the same high-quality research compounds at a fraction of the cost. Our mission is simple: make premium peptides accessible to every researcher.</p>
+                </div>
+                
+                <div class="pricing-comparison">
+                    <div class="comparison-card">
+                        <div class="card-header">
+                            <h3>Other Companies</h3>
+                            <div class="price-tag expensive">$300-800</div>
+                        </div>
+                        <div class="card-content">
+                            <p>Overpriced peptides with massive markups</p>
+                            <ul class="comparison-list negative">
+                                <li>Inflated prices</li>
+                                <li>Hidden fees</li>
+                                <li>Limited accessibility</li>
+                                <li>Same quality, higher cost</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="vs-divider">
+                        <span>VS</span>
+                    </div>
+                    
+                    <div class="comparison-card our-pricing">
+                        <div class="card-header">
+                            <h3>SchawPeptideLabs</h3>
+                            <div class="price-tag affordable">$76-384</div>
+                        </div>
+                        <div class="card-content">
+                            <p>Premium quality at affordable prices</p>
+                            <ul class="comparison-list positive">
+                                <li>Fair, transparent pricing</li>
+                                <li>No hidden costs</li>
+                                <li>Accessible to all researchers</li>
+                                <li>Same quality, better value</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mission-statement">
+                    <div class="mission-content">
+                        <h3>Our Mission</h3>
+                        <p>We source our peptides from the same reputable vendors that supply the expensive brands. The difference? We believe in fair pricing. Every researcher deserves access to high-quality compounds without the outrageous markups that plague this industry.</p>
+                        <button class="affordable-cta" onclick="showProducts('all')">
+                            <i class="fas fa-tag"></i>
+                            <span>See Our Fair Prices</span>
+                        </button>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- About Section -->
+            <section class="about-section">
+                <div class="about-header">
+                    <h2>Leading Research Innovation</h2>
+                    <p>SchawPeptideLabs is at the forefront of peptide research, providing scientists and researchers worldwide with the highest quality research compounds. Our commitment to purity, precision, and scientific excellence has made us the trusted choice for cutting-edge research.</p>
+                </div>
+                
+                <div class="features-grid-modern">
+                    <div class="feature-card-modern">
+                        <div class="card-visual">
+                            <div class="visual-container">
+                                <div class="test-tube-animation">
+                                    <div class="test-tube">
+                                        <div class="liquid"></div>
+                                        <div class="bubbles">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="purity-indicator">99.9%</div>
+                            </div>
+                        </div>
+                                                 <div class="card-content">
+                             <h3>Lab Tested</h3>
+                             <p>Every product undergoes rigorous testing to ensure 99.9% purity</p>
+                         </div>
+                    </div>
+                    
+                    <div class="feature-card-modern">
+                        <div class="card-visual">
+                            <div class="visual-container">
+                                <div class="shipping-animation">
+                                    <div class="package">
+                                        <i class="fas fa-box"></i>
+                                    </div>
+                                    <div class="speed-lines">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </div>
+                                <div class="delivery-time">24-48h</div>
+                            </div>
+                        </div>
+                                                 <div class="card-content">
+                             <h3>Fast Delivery</h3>
+                             <p>Quick and secure shipping to research facilities worldwide</p>
+                         </div>
+                    </div>
+                    
+                    <div class="feature-card-modern">
+                        <div class="card-visual">
+                            <div class="visual-container">
+                                <div class="certification-animation">
+                                    <div class="certificate">
+                                        <i class="fas fa-award"></i>
+                                    </div>
+                                    <div class="checkmarks">
+                                        <i class="fas fa-check"></i>
+                                        <i class="fas fa-check"></i>
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                </div>
+                                <div class="cert-badge">ISO</div>
+                            </div>
+                        </div>
+                                                 <div class="card-content">
+                             <h3>ISO Certified</h3>
+                             <p>Certified manufacturing processes meeting international standards</p>
+                         </div>
+                    </div>
+                    
+                    <div class="feature-card-modern">
+                        <div class="card-visual">
+                            <div class="visual-container">
+                                <div class="support-animation">
+                                    <div class="support-agent">
+                                        <i class="fas fa-user-tie"></i>
+                                    </div>
+                                    <div class="chat-bubbles">
+                                        <div class="bubble"></div>
+                                        <div class="bubble"></div>
+                                    </div>
+                                </div>
+                                <div class="availability">24/7</div>
+                            </div>
+                        </div>
+                                                 <div class="card-content">
+                             <h3>Expert Support</h3>
+                             <p>Dedicated research support team available for consultation</p>
+                         </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Featured Products Section -->
+            <section class="featured-products-section">
+                <div class="section-header">
+                    <h2>Our Best Selling Products</h2>
+                    <p>Check Out The Latest In Research Innovation</p>
+                </div>
+                
+                <div class="products-showcase">
+                    <div class="product-item" onclick="showProductDetail(products.find(p => p.id === 3))">
+                        <div class="product-image-container">
+                            <img src="StockPhotos/Reta/Reta5mg.png" alt="Retatrutide - Premium Research Peptide">
+                            <div class="product-badge premium">Premium</div>
+                        </div>
+                        <div class="product-details">
+                            <h4>Retatrutide</h4>
+                            <div class="price-range">$98.00 - $384.00</div>
+                            <button class="select-options" onclick="event.stopPropagation(); showProductDetail(products.find(p => p.id === 3))">Select options</button>
+                        </div>
+                    </div>
+                    
+                    <div class="product-item" onclick="showProductDetail(products.find(p => p.id === 4))">
+                        <div class="product-image-container">
+                            <img src="StockPhotos/BPC-157/BC5.png" alt="BPC-157 - Best Seller Research Peptide">
+                            <div class="product-badge popular">Best Seller</div>
+                        </div>
+                        <div class="product-details">
+                            <h4>BPC-157</h4>
+                            <div class="price-range">$64.00 - $85.00</div>
+                            <button class="select-options" onclick="event.stopPropagation(); showProductDetail(products.find(p => p.id === 4))">Select options</button>
+                        </div>
+                    </div>
+                    
+                    <div class="product-item" onclick="showProductDetail(products.find(p => p.id === 11))">
+                        <div class="product-image-container">
+                            <img src="StockPhotos/NAD/NAD100.png" alt="NAD+ - Longevity Research Compound">
+                            <div class="product-badge advanced">Longevity</div>
+                        </div>
+                        <div class="product-details">
+                            <h4>NAD+</h4>
+                            <div class="price-range">$315.00 - $515.00</div>
+                            <button class="select-options" onclick="event.stopPropagation(); showProductDetail(products.find(p => p.id === 11))">Select options</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="section-footer">
+                    <button class="view-all-btn" onclick="showProducts('all')">View All Products</button>
+                </div>
+            </section>
+
+            <!-- Coming Soon Section -->
+            <section class="coming-soon-section">
+                <div class="section-header">
+                    <h2>Coming Soon</h2>
+                    <p>Be the first to know when these products go live. Click below to get notified as soon as they release!</p>
+                </div>
+                
+                <div class="coming-soon-grid">
+                    <div class="coming-soon-item">
+                        <div class="product-image-placeholder">
+                            <div class="image-placeholder coming-soon">
+                                <i class="fas fa-bed"></i>
+                                <span>Coming Soon</span>
+                            </div>
+                            <div class="coming-soon-badge sleep">Sleep</div>
+                        </div>
+                        <div class="product-details">
+                            <h4>DSIP</h4>
+                            <div class="price-range">$85.00 - $245.00</div>
+                            <button class="notify-btn">Notify Me</button>
+                        </div>
+                    </div>
+                    
+                    <div class="coming-soon-item">
+                        <div class="product-image-placeholder">
+                            <div class="image-placeholder coming-soon">
+                                <i class="fas fa-dna"></i>
+                                <span>Coming Soon</span>
+                            </div>
+                            <div class="coming-soon-badge metabolic">Fat Loss</div>
+                        </div>
+                        <div class="product-details">
+                            <h4>AOD-9604</h4>
+                            <div class="price-range">$145.00 - $395.00</div>
+                            <button class="notify-btn">Notify Me</button>
+                        </div>
+                    </div>
+                    
+                    <div class="coming-soon-item">
+                        <div class="product-image-placeholder">
+                            <div class="image-placeholder coming-soon">
+                                <i class="fas fa-shield-virus"></i>
+                                <span>Coming Soon</span>
+                            </div>
+                            <div class="coming-soon-badge antimicrobial">Antimicrobial</div>
+                        </div>
+                        <div class="product-details">
+                            <h4>LL-37</h4>
+                            <div class="price-range">$285.00 - $895.00</div>
+                            <button class="notify-btn">Notify Me</button>
+                        </div>
+                    </div>
+                    
+                    <div class="coming-soon-item">
+                        <div class="product-image-placeholder">
+                            <div class="image-placeholder coming-soon">
+                                <i class="fas fa-heart"></i>
+                                <span>Coming Soon</span>
+                            </div>
+                            <div class="coming-soon-badge reproductive">Reproductive</div>
+                        </div>
+                        <div class="product-details">
+                            <h4>Kisspeptin-10</h4>
+                            <div class="price-range">$195.00 - $675.00</div>
+                            <button class="notify-btn">Notify Me</button>
+                        </div>
+                    </div>
+                    
+                    <div class="coming-soon-item">
+                        <div class="product-image-placeholder">
+                            <div class="image-placeholder coming-soon">
+                                <i class="fas fa-fire"></i>
+                                <span>Coming Soon</span>
+                            </div>
+                            <div class="coming-soon-badge anti-inflammatory">Anti-inflammatory</div>
+                        </div>
+                        <div class="product-details">
+                            <h4>KPV</h4>
+                            <div class="price-range">$145.00 - $385.00</div>
+                            <button class="notify-btn">Notify Me</button>
+                        </div>
+                    </div>
+                    
+                    <div class="coming-soon-item">
+                        <div class="product-image-placeholder">
+                            <div class="image-placeholder coming-soon">
+                                <i class="fas fa-atom"></i>
+                                <span>Coming Soon</span>
+                            </div>
+                            <div class="coming-soon-badge mitochondrial">Mitochondrial</div>
+                        </div>
+                        <div class="product-details">
+                            <h4>MOTs-C</h4>
+                            <div class="price-range">$245.00 - $785.00</div>
+                            <button class="notify-btn">Notify Me</button>
+                        </div>
+                    </div>
+                    
+                    <div class="coming-soon-item">
+                        <div class="product-image-placeholder">
+                            <div class="image-placeholder coming-soon">
+                                <i class="fas fa-flask"></i>
+                                <span>Coming Soon</span>
+                            </div>
+                            <div class="coming-soon-badge">Out of Stock</div>
+                        </div>
+                        <div class="product-details">
+                            <h4>Specialized SARM</h4>
+                            <div class="price-range">$180.00</div>
+                            <button class="notify-btn">Read more</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ Section -->
+            <section class="faq-section">
+                <div class="container">
+                    <div class="faq-header">
+                        <h2>Frequently Asked Questions</h2>
+                        <p>Find answers to common questions about our research compounds and services</p>
+                    </div>
+                    
+                    <div class="faq-container">
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFAQ(this)">
+                                <h3>What is the purity of your peptides?</h3>
+                                <i class="fas fa-chevron-down faq-icon"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>All our peptides are manufactured to achieve ≥99% purity. Each batch undergoes rigorous third-party testing including HPLC analysis and mass spectrometry to verify purity and identity. We provide a Certificate of Analysis (COA) with every product.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFAQ(this)">
+                                <h3>Are these products for human consumption?</h3>
+                                <i class="fas fa-chevron-down faq-icon"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>No, all our products are strictly for research purposes only. They are not intended for human consumption, medical use, or any therapeutic applications. These compounds are designed for qualified researchers and institutions conducting legitimate scientific studies.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFAQ(this)">
+                                <h3>How should I store the peptides?</h3>
+                                <i class="fas fa-chevron-down faq-icon"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Lyophilized peptides should be stored at -20°C in a dry environment. Once reconstituted, store at 2-8°C and use within the timeframe specified on the product documentation. Always handle with appropriate laboratory safety measures.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFAQ(this)">
+                                <h3>What is your shipping policy?</h3>
+                                <i class="fas fa-chevron-down faq-icon"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>We offer fast and secure shipping worldwide. Most orders are processed within 24-48 hours. Shipping times vary by location: 2-3 days domestic, 5-10 days international. All products are shipped with appropriate temperature control and discrete packaging.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFAQ(this)">
+                                <h3>Do you provide Certificates of Analysis?</h3>
+                                <i class="fas fa-chevron-down faq-icon"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Yes, every product comes with a comprehensive Certificate of Analysis (COA) that includes HPLC chromatography, mass spectrometry results, purity verification, and batch-specific quality control data. COAs are available upon request or with your order.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFAQ(this)">
+                                <h3>What payment methods do you accept?</h3>
+                                <i class="fas fa-chevron-down faq-icon"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>We accept major credit cards, bank transfers, and cryptocurrency payments. All transactions are processed securely through encrypted payment gateways. Institutional customers may also arrange for purchase orders and NET payment terms.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFAQ(this)">
+                                <h3>Can I return or exchange products?</h3>
+                                <i class="fas fa-chevron-down faq-icon"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Due to the nature of research compounds, we cannot accept returns of opened products. However, if you receive a damaged or incorrect item, please contact us within 48 hours of delivery. We stand behind our quality and will resolve any legitimate issues promptly.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFAQ(this)">
+                                <h3>Do you offer bulk or wholesale pricing?</h3>
+                                <i class="fas fa-chevron-down faq-icon"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Yes, we offer competitive bulk pricing for qualified research institutions and regular customers. Volume discounts are available starting at 10+ units. Contact our sales team for custom quotes and institutional pricing arrangements.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Recently Viewed Products -->
+            <section class="recently-viewed-section" id="recently-viewed-section" style="display: none;">
+                <div class="section-header">
+                    <h2>Recently Viewed</h2>
+                    <p>Products you've looked at recently</p>
+                </div>
+                <div class="recently-viewed-grid" id="recently-viewed-grid">
+                    <!-- Recently viewed products will be populated here -->
+                </div>
+            </section>
+
+            <!-- Featured Categories -->
+            <section class="featured-categories">
+                <h2>Research Categories</h2>
+                <div class="categories-grid">
+                    <div class="category-card" onclick="showProducts('peptides')">
+                        <div class="category-icon">
+                            <i class="fas fa-atom"></i>
+                        </div>
+                        <h3>Peptides</h3>
+                        <p>High-purity research peptides for advanced studies</p>
+                        <span class="category-count">30+ Products</span>
+                    </div>
+                    <div class="category-card" onclick="showProducts('sarms')">
+                        <div class="category-icon">
+                            <i class="fas fa-dna"></i>
+                        </div>
+                        <h3>SARMs</h3>
+                        <p>Selective androgen receptor modulators for research</p>
+                        <span class="category-count">12+ Products</span>
+                    </div>
+                    <div class="category-card" onclick="showProducts('cognitive')">
+                        <div class="category-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3>Cognitive</h3>
+                        <p>Nootropic compounds for cognitive research</p>
+                        <span class="category-count">8+ Products</span>
+                    </div>
+                    <div class="category-card" onclick="showProducts('research-oils')">
+                        <div class="category-icon">
+                            <i class="fas fa-flask"></i>
+                        </div>
+                        <h3>Research Oils</h3>
+                        <p>Premium research oils and solutions</p>
+                        <span class="category-count">10+ Products</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Why Choose Us -->
+            <section class="why-choose-us">
+                <div class="why-content">
+                    <div class="why-text">
+                        <h2>Why Choose SchawPeptideLabs?</h2>
+                        <div class="reasons">
+                            <div class="reason">
+                                <div class="reason-number">01</div>
+                                <div class="reason-content">
+                                    <h4>Unmatched Purity</h4>
+                                    <p>Our products consistently achieve 99.9% purity through advanced synthesis and purification techniques.</p>
+                                </div>
+                            </div>
+                            <div class="reason">
+                                <div class="reason-number">02</div>
+                                <div class="reason-content">
+                                    <h4>Research Focused</h4>
+                                    <p>Designed specifically for research applications with comprehensive documentation and support.</p>
+                                </div>
+                            </div>
+                            <div class="reason">
+                                <div class="reason-number">03</div>
+                                <div class="reason-content">
+                                    <h4>Global Reach</h4>
+                                    <p>Serving research institutions and scientists in over 50 countries worldwide.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-number">5000+</div>
+                            <div class="stat-label">Researchers Served</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">99.9%</div>
+                            <div class="stat-label">Average Purity</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">50+</div>
+                            <div class="stat-label">Countries Reached</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">24/7</div>
+                            <div class="stat-label">Research Support</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products-section-page" style="display: none;">
+        <div class="container">
+            <div class="page-header">
+                <h2>Research Products</h2>
+                <p>Explore our comprehensive catalog of research compounds</p>
+            </div>
+            <div class="content-wrapper">
+                <!-- Sidebar Categories -->
+                <aside class="sidebar">
+                    <div class="categories">
+                        <h3>Categories</h3>
+                        <ul class="category-list">
+                                                    <li><a href="#" class="category-item active" data-category="all">All Products</a></li>
+                        <li><a href="#" class="category-item" data-category="glp-1-agonists">GLP-1 Agonists</a></li>
+                        <li><a href="#" class="category-item" data-category="healing-peptides">Healing Peptides</a></li>
+                        <li><a href="#" class="category-item" data-category="growth-hormones">Growth Hormones</a></li>
+                        <li><a href="#" class="category-item" data-category="longevity">Longevity & Anti-Aging</a></li>
+                        <li><a href="#" class="category-item" data-category="neurohormones">Neurohormones</a></li>
+                        <li><a href="#" class="category-item" data-category="metabolic">Metabolic Research</a></li>
+                        <li><a href="#" class="category-item" data-category="liquids">Research Liquids</a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Trust Badges -->
+                    <div class="trust-badges">
+                        <div class="badge">
+                            <i class="fas fa-certificate"></i>
+                            <span>Lab Tested</span>
+                        </div>
+                        <div class="badge">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Secure Payment</span>
+                        </div>
+                        <div class="badge">
+                            <i class="fas fa-shipping-fast"></i>
+                            <span>Fast Shipping</span>
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- Products Grid Section -->
+                <section class="products-section">
+                    <div class="products-header">
+                        <div class="results-info">
+                            <span>Showing 1-12 of 61 results</span>
+                        </div>
+                        <div class="sort-controls">
+                            <select class="sort-select">
+                                <option value="popularity">Sort by popularity</option>
+                                <option value="price-low">Price: Low to High</option>
+                                <option value="price-high">Price: High to Low</option>
+                                <option value="name">Name A-Z</option>
+                                <option value="newest">Newest First</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Loading State -->
+                    <div class="loading-state" id="loading-state" style="display: none;">
+                        <div class="loading-grid">
+                            <div class="loading-card"></div>
+                            <div class="loading-card"></div>
+                            <div class="loading-card"></div>
+                            <div class="loading-card"></div>
+                            <div class="loading-card"></div>
+                            <div class="loading-card"></div>
+                        </div>
+                    </div>
+
+                    <div class="products-grid" id="products-grid">
+                        <!-- Products will be populated dynamically -->
+                    </div>
+
+
+                </section>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Section -->
+    <section id="research" class="content-section" style="display: none;">
+        <div class="container">
+            <div class="page-header">
+                <h2>Research Support</h2>
+                <p>Connecting researchers with premium compounds from trusted sources</p>
+            </div>
+            <div class="research-content">
+                <div class="research-info">
+                    <h3>Our Research Support Commitment</h3>
+                    <p>At SchawPeptideLabs, we are dedicated to supporting groundbreaking research in peptide science, molecular biology, and related fields. Through our extensive network of carefully selected manufacturing partners, we connect researchers with compounds from suppliers known for their commitment to quality standards, making research materials accessible at competitive prices.</p>
+                    
+                    <h3>Expert Vendor Curation</h3>
+                    <p>Our expertise lies in identifying and partnering with reputable manufacturers who specialize in research-grade compounds. We focus on suppliers with established track records in the research community and those who represent adherence to professional manufacturing practices. This careful curation process allows researchers to access compounds from trusted sources while benefiting from our competitive sourcing advantages.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="content-section" style="display: none;">
+        <div class="container">
+            <div class="page-header">
+                <h2>About SchawPeptideLabs</h2>
+                <p>Your trusted partner in research excellence</p>
+            </div>
+            <div class="about-full-content">
+                <div class="company-story">
+                    <h3>Our Story</h3>
+                    <p>Founded by a dedicated team passionate about advancing scientific research, SchawPeptideLabs emerged from a shared vision to provide the scientific community with affordable access to high-quality research compounds. As a trusted third-party distributor, we carefully source our peptides from reputable vendors and manufacturers, ensuring researchers worldwide have access to premium compounds without the premium prices.</p>
+                    
+                    <h3>Our Mission</h3>
+                    <p>To democratize access to high-quality research peptides by sourcing from trusted vendors and offering them at fair, affordable prices. We bridge the gap between researchers and premium compounds, making cutting-edge research accessible to laboratories of all sizes.</p>
+                    
+                    <h3>Our Values</h3>
+                    <ul>
+                        <li><strong>Quality:</strong> Rigorous vendor selection and quality assurance from trusted sources</li>
+                        <li><strong>Accessibility:</strong> Fair pricing to make research compounds available to all researchers</li>
+                        <li><strong>Integrity:</strong> Transparent sourcing practices and honest communication about our role</li>
+                        <li><strong>Support:</strong> Dedicated assistance for all research needs and vendor coordination</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="content-section" style="display: none;">
+        <div class="container">
+            <div class="page-header">
+                <h2>Contact Us</h2>
+                <p>Get in touch with our research support team</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-form-section">
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="institution">Institution/Company</label>
+                            <input type="text" id="institution" name="institution">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+                <div class="contact-info-section">
+                    <div class="contact-details">
+                        <h3>Research Support</h3>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>research@schawpeptidelabs.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+1 (555) 123-4567</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <span>Mon-Fri 9AM-6PM EST</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Detail Section -->
+    <section id="product-detail" class="product-detail-section" style="display: none;">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="#" onclick="showSection('home')">Home</a>
+                <span>/</span>
+                <a href="#" onclick="showSection('products')">Products</a>
+                <span>/</span>
+                <span id="product-breadcrumb">Product Name</span>
+            </div>
+            
+            <div class="product-detail-content">
+                                <div class="product-images">
+                    <div class="main-image" onclick="openImageZoom()">
+                        <img id="main-product-image" src="" alt="" />
+                        <div class="zoom-icon">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    <div class="availability-notice">
+                        <p><strong>Current Availability:</strong> We are currently selling 10-vial kits only. Individual vials will be available soon.</p>
+                    </div>
+                </div>
+                
+                <div class="product-info-detail">
+                    <h1 id="product-detail-title">Product Name</h1>
+                    
+                    <div class="product-description">
+                        <p id="product-detail-description">Product description will appear here...</p>
+                        
+                        <div class="product-features">
+                            <ul id="product-features-list">
+                                <li>≥99% purity</li>
+                                <li>third-party tested</li>
+                                <li>sterilized vials</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="research-notice">
+                            <strong>SOLD FOR RESEARCH PURPOSES ONLY</strong>
+                        </div>
+                    </div>
+                    
+                    <div class="product-pricing">
+                        <div class="price-range">
+                            <span id="product-detail-price">$74.00 – $328.00</span>
+                        </div>
+                        
+                        <div class="compliance-note">
+                            <p><strong>Note:</strong> <span id="product-note">This product was previously labeled with a different name. The name has been updated for compliance. The research material remains the same.</span></p>
+                        </div>
+                    </div>
+                    
+                    <div class="product-options">
+                        <div class="size-selection">
+                            <label for="size-select">Size</label>
+                            <select id="size-select" class="size-dropdown">
+                                <option value="">Choose an option</option>
+                                <option value="small">Small - $74.00</option>
+                                <option value="large">Large - $328.00</option>
+                            </select>
+                        </div>
+                        
+                        <div class="quantity-cart">
+                            <div class="quantity-selector">
+                                <button type="button" class="quantity-btn minus" onclick="changeQuantity(-1)">-</button>
+                                <input type="number" id="quantity-input" value="1" min="1" max="99" />
+                                <button type="button" class="quantity-btn plus" onclick="changeQuantity(1)">+</button>
+                            </div>
+                            <button class="add-to-cart-btn" onclick="addProductToCart()">Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Certificate Section -->
+            <div class="certificate-section">
+                <h2>CERTIFICATE OF ANALYSIS</h2>
+                <div class="certificate-content">
+                    <p>Each batch of our research compounds comes with a comprehensive Certificate of Analysis (COA) that includes:</p>
+                    <div class="certificate-features">
+                        <div class="cert-feature">
+                            <i class="fas fa-microscope"></i>
+                            <h4>HPLC Analysis</h4>
+                            <p>High-Performance Liquid Chromatography testing for purity verification</p>
+                        </div>
+                        <div class="cert-feature">
+                            <i class="fas fa-atom"></i>
+                            <h4>Mass Spectrometry</h4>
+                            <p>Molecular weight confirmation and structural analysis</p>
+                        </div>
+                        <div class="cert-feature">
+                            <i class="fas fa-shield-alt"></i>
+                            <h4>Purity Testing</h4>
+                            <p>Guaranteed ≥99% purity with detailed impurity profiling</p>
+                        </div>
+                        <div class="cert-feature">
+                            <i class="fas fa-clipboard-check"></i>
+                            <h4>Quality Control</h4>
+                            <p>Comprehensive quality control documentation and batch records</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Legal Disclaimer Section -->
+            <div class="legal-disclaimer-section">
+                <div class="disclaimer-header">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <h2>IMPORTANT LEGAL DISCLAIMER</h2>
+                </div>
+                
+                <div class="disclaimer-content">
+                    <div class="disclaimer-block">
+                        <h3>Research Use Only</h3>
+                        <p>All products sold by SchawPeptideLabs are intended exclusively for laboratory research purposes and are available only to qualified professionals, academic institutions, and authorized research entities. These compounds are <strong>NOT</strong> intended for human consumption, veterinary applications, diagnostic procedures, therapeutic treatments, or any other use involving living organisms.</p>
+                    </div>
+                    
+                    <div class="disclaimer-block">
+                        <h3>Purchaser Qualifications & Responsibilities</h3>
+                        <p>By completing this purchase, you acknowledge and confirm that:</p>
+                        <ul>
+                            <li>You possess the appropriate professional qualifications, training, and laboratory facilities necessary for the safe handling of chemical research compounds</li>
+                            <li>You will utilize this product in strict accordance with all applicable federal, state, and local regulations and laws</li>
+                            <li>You understand the potential hazards associated with laboratory chemicals and will implement proper safety protocols</li>
+                            <li>You will not transfer, sell, or distribute this product to unauthorized parties</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="disclaimer-block warning">
+                        <h3>Strictly Prohibited Applications</h3>
+                        <ul>
+                            <li><strong>Human or Animal Administration:</strong> Under no circumstances shall this product be administered to humans or animals</li>
+                            <li><strong>Pharmaceutical Manufacturing:</strong> This product shall not be used as an active pharmaceutical ingredient (API) in drug compounding or manufacturing</li>
+                            <li><strong>Illegal Substance Development:</strong> SchawPeptideLabs strictly prohibits the use of its products for developing, testing, or producing controlled or illegal substances</li>
+                            <li><strong>Food or Cosmetic Applications:</strong> This product is not approved for use in food, beverages, cosmetics, or personal care products</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="disclaimer-block">
+                        <h3>Regulatory Status & FDA Compliance</h3>
+                        <p>SchawPeptideLabs makes no claims regarding FDA approval for any intended use. The statements and information provided about this product have not been evaluated by the U.S. Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease or medical condition.</p>
+                    </div>
+                    
+                    <div class="disclaimer-block">
+                        <h3>Limitation of Liability</h3>
+                        <p>The purchaser assumes complete responsibility for the proper handling, storage, transportation, and use of this product. SchawPeptideLabs disclaims all liability for any direct, indirect, incidental, consequential, or punitive damages arising from improper use, mishandling, or unauthorized application of this product. SchawPeptideLabs reserves the absolute right to refuse sales to any individual or organization suspected of product misuse or non-compliance with these terms.</p>
+                    </div>
+                    
+                    <div class="disclaimer-block">
+                        <h3>Professional Consultation</h3>
+                        <p>If you have questions regarding the appropriate and lawful use of this research compound, please consult with qualified professionals experienced in laboratory research and chemical safety protocols. Completion of this purchase constitutes your agreement to all terms and conditions outlined in this disclaimer.</p>
+                    </div>
+                    
+                    <div class="disclaimer-footer">
+                        <p><i class="fas fa-info-circle"></i> <strong>For questions about safety protocols or regulatory compliance, contact our research support team at research@schawpeptidelabs.com</strong></p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Related Products Section -->
+            <div class="related-products-section">
+                <div class="related-header">
+                    <h2>Related Products</h2>
+                    <p>You might also be interested in these research compounds</p>
+                </div>
+                
+                <div class="related-products-grid" id="related-products-grid">
+                    <!-- Related products will be populated dynamically -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quality Assurance Section -->
+    <section id="quality" class="content-section" style="display: none;">
+        <div class="container">
+            <div class="section-header">
+                <h1>Quality Assurance</h1>
+                <p>Our commitment to the highest standards of quality and purity</p>
+            </div>
+            
+            <div class="quality-content">
+                <div class="quality-overview">
+                    <h2>Rigorous Testing Standards</h2>
+                    <p>At SchawPeptideLabs, quality is not negotiable. Every batch of our research compounds undergoes comprehensive testing to ensure the highest standards of purity, potency, and consistency. Our multi-stage quality assurance process guarantees that researchers receive only the finest materials for their critical work.</p>
+                </div>
+                
+                <div class="quality-processes">
+                    <div class="process-item">
+                        <div class="process-icon">
+                            <i class="fas fa-microscope"></i>
+                        </div>
+                        <div class="process-content">
+                            <h3>HPLC Analysis</h3>
+                            <p>High-Performance Liquid Chromatography testing ensures ≥99% purity for all peptides and compounds. Each batch is analyzed for identity, purity, and potential impurities.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="process-item">
+                        <div class="process-icon">
+                            <i class="fas fa-atom"></i>
+                        </div>
+                        <div class="process-content">
+                            <h3>Mass Spectrometry</h3>
+                            <p>Advanced MS analysis confirms molecular weight and structural integrity, providing definitive identification of each compound's composition.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="process-item">
+                        <div class="process-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <div class="process-content">
+                            <h3>Certificate of Analysis</h3>
+                            <p>Every product includes a comprehensive COA with detailed test results, batch information, and storage recommendations.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="process-item">
+                        <div class="process-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="process-content">
+                            <h3>ISO Certification</h3>
+                            <p>Our manufacturing processes meet international ISO standards, ensuring consistent quality and regulatory compliance.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shipping Info Section -->
+    <section id="shipping" class="content-section" style="display: none;">
+        <div class="container">
+            <div class="section-header">
+                <h1>Shipping Information</h1>
+                <p>Fast, secure, and reliable delivery worldwide</p>
+            </div>
+            
+            <div class="shipping-content">
+                <div class="shipping-overview">
+                    <h2>Global Shipping Network</h2>
+                    <p>We understand the critical nature of research timelines. Our expedited shipping network ensures your compounds arrive quickly and in perfect condition, maintaining the integrity required for scientific research.</p>
+                </div>
+                
+                <div class="shipping-details">
+                    <div class="shipping-item">
+                        <div class="shipping-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="shipping-content">
+                            <h3>Processing Time</h3>
+                            <p>Orders are processed within 24-48 hours. All products are carefully packaged with appropriate temperature controls and protective materials.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="shipping-item">
+                        <div class="shipping-icon">
+                            <i class="fas fa-plane"></i>
+                        </div>
+                        <div class="shipping-content">
+                            <h3>Delivery Times</h3>
+                            <ul>
+                                <li><strong>Domestic (US):</strong> 2-3 business days</li>
+                                <li><strong>Canada:</strong> 3-5 business days</li>
+                                <li><strong>Europe:</strong> 5-7 business days</li>
+                                <li><strong>International:</strong> 7-10 business days</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="shipping-item">
+                        <div class="shipping-icon">
+                            <i class="fas fa-thermometer-half"></i>
+                        </div>
+                        <div class="shipping-content">
+                            <h3>Temperature Control</h3>
+                            <p>All products are shipped with appropriate temperature controls. Cold-chain items include insulated packaging and gel packs to maintain stability during transit.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="shipping-item">
+                        <div class="shipping-icon">
+                            <i class="fas fa-box"></i>
+                        </div>
+                        <div class="shipping-content">
+                            <h3>Discrete Packaging</h3>
+                            <p>All shipments use discrete, professional packaging with no external indication of contents. Tracking information is provided for all orders.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Terms of Service Section -->
+    <section id="terms" class="content-section" style="display: none;">
+        <div class="container">
+            <div class="section-header">
+                <h1>Terms of Service</h1>
+                <p>Please read these terms carefully before using our services</p>
+            </div>
+            
+            <div class="legal-content">
+                <div class="legal-section">
+                    <h2>1. Acceptance of Terms</h2>
+                    <p>By accessing and using SchawPeptideLabs' website and services, you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this service.</p>
+                </div>
+                
+                <div class="legal-section">
+                    <h2>2. Research Use Only</h2>
+                    <p>All products sold by SchawPeptideLabs are strictly for research purposes only. These products are NOT intended for human consumption, medical use, or any therapeutic applications. Products are designed for qualified researchers and institutions conducting legitimate scientific studies.</p>
+                    <p><strong>Safety Notice:</strong> We have carefully curated our product catalog to exclude compounds with known serious adverse effects or high abuse potential. Our focus is on providing safer research compounds for legitimate scientific investigation.</p>
+                </div>
+                
+                <div class="legal-section">
+                    <h2>3. Age Restriction</h2>
+                    <p>You must be at least 21 years of age to purchase products from SchawPeptideLabs. By placing an order, you confirm that you meet this age requirement and are legally authorized to make such purchases in your jurisdiction.</p>
+                </div>
+                
+                <div class="legal-section">
+                    <h2>4. Product Information</h2>
+                    <p>We strive to provide accurate product information, including descriptions, specifications, and pricing. However, we do not warrant that product descriptions or other content is accurate, complete, reliable, current, or error-free.</p>
+                </div>
+                
+                <div class="legal-section">
+                    <h2>5. No Refunds Policy</h2>
+                    <p><strong>Due to the nature of our research compounds, all sales are final. We do not accept returns or provide refunds for any products once they have been shipped.</strong> This policy is in place due to the sensitive nature of research materials and regulatory requirements. Please ensure you are ordering the correct products and quantities before completing your purchase.</p>
+                </div>
+                
+                <div class="legal-section">
+                    <h2>6. Damaged or Incorrect Orders</h2>
+                    <p>If you receive damaged or incorrect products, please contact us within 48 hours of delivery. We will work to resolve legitimate issues promptly, which may include replacement products at our discretion.</p>
+                </div>
+                
+                <div class="legal-section">
+                    <h2>7. Compliance and Legal Use</h2>
+                    <p>Customers are responsible for ensuring that their purchase and use of our products complies with all applicable laws and regulations in their jurisdiction. SchawPeptideLabs is not responsible for any misuse of our products.</p>
+                </div>
+                
+                <div class="legal-section">
+                    <h2>8. Limitation of Liability</h2>
+                    <p>SchawPeptideLabs shall not be liable for any direct, indirect, incidental, special, or consequential damages arising from the use or inability to use our products or services, even if we have been advised of the possibility of such damages.</p>
+                </div>
+                
+                <div class="legal-section">
+                    <h2>9. Privacy and Data Protection</h2>
+                    <p>Your privacy is important to us. Please review our Privacy Policy to understand how we collect, use, and protect your personal information.</p>
+                </div>
+                
+                <div class="legal-section">
+                    <h2>10. Changes to Terms</h2>
+                    <p>We reserve the right to modify these terms at any time. Changes will be effective immediately upon posting to our website. Continued use of our services constitutes acceptance of modified terms.</p>
+                </div>
+                
+                <div class="legal-section">
+                    <h2>11. Contact Information</h2>
+                    <p>If you have any questions about these Terms of Service, please contact us at support@schawpeptidelabs.com.</p>
+                </div>
+                
+                <div class="legal-footer">
+                    <p><em>Last updated: September 2025</em></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Privacy Policy Section -->
+    <section id="privacy" class="content-section" style="display: none;">
+        <div class="container">
+            <div class="section-header">
+                <h1>Privacy Policy</h1>
+                <p>How we collect, use, and protect your information</p>
+            </div>
+            
+            <div class="legal-content">
+                <div class="legal-section">
+                    <h2>1. Information We Collect</h2>
+                    <h3>Personal Information</h3>
+                    <p>We collect information you provide directly to us, such as when you create an account, make a purchase, or contact us. This may include:</p>
+                    <ul>
+                        <li>Name and contact information (email, phone, address)</li>
+                        <li>Payment information (processed securely through encrypted payment gateways)</li>
+                        <li>Research institution or organization details</li>
+                        <li>Order history and preferences</li>
+                    </ul>
+                    
+                    <h3>Automatically Collected Information</h3>
+                    <p>We automatically collect certain information when you visit our website:</p>
+                    <ul>
+                        <li>IP address and browser information</li>
+                        <li>Pages visited and time spent on our site</li>
+                        <li>Referring website information</li>
+                        <li>Device and operating system information</li>
+                    </ul>
+                </div>
+                
+                <div class="legal-section">
+                    <h2>2. How We Use Your Information</h2>
+                    <p>We use the information we collect to:</p>
+                    <ul>
+                        <li>Process and fulfill your orders</li>
+                        <li>Communicate with you about your orders and account</li>
+                        <li>Provide customer support and respond to inquiries</li>
+                        <li>Improve our website and services</li>
+                        <li>Comply with legal obligations</li>
+                        <li>Send important updates about our products and services</li>
+                    </ul>
+                </div>
+                
+                <div class="legal-section">
+                    <h2>3. Information Sharing</h2>
+                    <p>We do not sell, trade, or rent your personal information to third parties. We may share your information only in the following circumstances:</p>
+                    <ul>
+                        <li><strong>Service Providers:</strong> With trusted third-party service providers who assist in operating our website and conducting business</li>
+                        <li><strong>Legal Requirements:</strong> When required by law or to protect our rights and safety</li>
+                        <li><strong>Business Transfers:</strong> In connection with a merger, acquisition, or sale of business assets</li>
+                    </ul>
+                </div>
+                
+                <div class="legal-section">
+                    <h2>4. Data Security</h2>
+                    <p>We implement appropriate technical and organizational measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. This includes:</p>
+                    <ul>
+                        <li>SSL encryption for all data transmission</li>
+                        <li>Secure payment processing systems</li>
+                        <li>Regular security assessments and updates</li>
+                        <li>Limited access to personal information on a need-to-know basis</li>
+                    </ul>
+                </div>
+                
+                <div class="legal-section">
+                    <h2>5. Data Retention</h2>
+                    <p>We retain your personal information for as long as necessary to fulfill the purposes outlined in this privacy policy, unless a longer retention period is required or permitted by law. Order information is typically retained for 7 years for regulatory compliance.</p>
+                </div>
+                
+                <div class="legal-section">
+                    <h2>6. Your Rights</h2>
+                    <p>Depending on your location, you may have certain rights regarding your personal information:</p>
+                    <ul>
+                        <li>Access to your personal information</li>
+                        <li>Correction of inaccurate information</li>
+                        <li>Deletion of your information (subject to legal requirements)</li>
+                        <li>Opt-out of marketing communications</li>
+                        <li>Data portability (where applicable)</li>
+                    </ul>
+                </div>
+                
+                <div class="legal-section">
+                    <h2>7. Cookies and Tracking</h2>
+                    <p>We use cookies and similar technologies to enhance your browsing experience, analyze website traffic, and understand user preferences. You can control cookie settings through your browser preferences.</p>
+                </div>
+                
+                <div class="legal-section">
+                    <h2>8. International Transfers</h2>
+                    <p>Your information may be transferred to and processed in countries other than your own. We ensure appropriate safeguards are in place to protect your information during such transfers.</p>
+                </div>
+                
+                <div class="legal-section">
+                    <h2>9. Children's Privacy</h2>
+                    <p>Our services are not intended for individuals under 21 years of age. We do not knowingly collect personal information from children under 21.</p>
+                </div>
+                
+                <div class="legal-section">
+                    <h2>10. Changes to This Policy</h2>
+                    <p>We may update this privacy policy from time to time. We will notify you of any material changes by posting the new policy on our website and updating the "Last Updated" date.</p>
+                </div>
+                
+                <div class="legal-section">
+                    <h2>11. Contact Us</h2>
+                    <p>If you have any questions about this Privacy Policy or our data practices, please contact us at:</p>
+                    <ul>
+                        <li>Email: privacy@schawpeptidelabs.com</li>
+                        <li>Phone: 1-800-SCHAW-LAB</li>
+                        <li>Address: SchawPeptideLabs Privacy Office, [Your Address]</li>
+                    </ul>
+                </div>
+                
+                <div class="legal-footer">
+                    <p><em>Last updated: September 2025</em></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Section -->
+    <section id="cart" class="content-section" style="display: none;">
+        <div class="container">
+            <div class="section-header">
+                <h1>Shopping Cart</h1>
+                <p>Review your selected research compounds</p>
+            </div>
+            
+            <div class="cart-content">
+                <div class="cart-items" id="cart-items-container">
+                    <!-- Cart items will be populated here -->
+                </div>
+                
+                <div class="cart-summary">
+                    <div class="summary-card">
+                        <h3>Order Summary</h3>
+                        <div class="summary-line">
+                            <span>Subtotal:</span>
+                            <span id="cart-subtotal">$0.00</span>
+                        </div>
+                        <div class="summary-line">
+                            <span>Shipping:</span>
+                            <span id="cart-shipping">$15.00</span>
+                        </div>
+                        
+                        <!-- Discount Code Section -->
+                        <div class="discount-code-section">
+                            <div class="discount-input-group">
+                                <input type="text" id="discount-code-input" placeholder="Enter discount code" maxlength="20">
+                                <button class="apply-discount-btn" onclick="applyDiscountCode()">
+                                    <i class="fas fa-tag"></i>
+                                    Apply
+                                </button>
+                            </div>
+                            <div class="discount-message" id="discount-message" style="display: none;"></div>
+                        </div>
+                        
+                        <div class="summary-line discount-line" id="discount-line" style="display: none;">
+                            <span>Discount (<span id="applied-discount-code"></span>):</span>
+                            <span id="cart-discount">-$0.00</span>
+                            <button class="remove-discount-btn" onclick="removeDiscountCode()" title="Remove discount">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                        
+                        <div class="summary-line total">
+                            <span>Total:</span>
+                            <span id="cart-total">$15.00</span>
+                        </div>
+                        <button class="checkout-btn" onclick="proceedToCheckout()">
+                            <i class="fas fa-credit-card"></i>
+                            Proceed to Checkout
+                        </button>
+                        <button class="guest-checkout-btn" onclick="guestCheckout()">
+                            <i class="fas fa-user-clock"></i>
+                            Guest Checkout
+                        </button>
+                        <button class="continue-shopping-btn" onclick="showSection('products')">
+                            <i class="fas fa-arrow-left"></i>
+                            Continue Shopping
+                        </button>
+                    </div>
+                    
+                    <div class="shipping-info">
+                        <h4>Shipping Information</h4>
+                        <ul>
+                            <li><i class="fas fa-truck"></i> Free shipping on orders over $150</li>
+                            <li><i class="fas fa-clock"></i> Processing time: 24-48 hours</li>
+                            <li><i class="fas fa-shield-alt"></i> Secure packaging guaranteed</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="empty-cart" id="empty-cart" style="display: none;">
+                <div class="empty-cart-content">
+                    <i class="fas fa-shopping-cart"></i>
+                    <h3>Your cart is empty</h3>
+                    <p>Add some research compounds to get started</p>
+                    <button class="continue-shopping-btn" onclick="showSection('products')">
+                        <i class="fas fa-arrow-left"></i>
+                        Continue Shopping
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>SchawPeptideLabs</h4>
+                    <p>Leading provider of premium research peptides and compounds. Committed to advancing scientific research with the highest quality products.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#quality" onclick="showSection('quality')">Quality Assurance</a></li>
+                        <li><a href="#shipping" onclick="showSection('shipping')">Shipping Info</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#contact" onclick="showSection('contact')">Contact Us</a></li>
+                        <li><a href="#terms" onclick="showSection('terms')">Terms of Service</a></li>
+                        <li><a href="#privacy" onclick="showSection('privacy')">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-envelope"></i> research@schawpeptidelabs.com</p>
+                        <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                        <p><i class="fas fa-clock"></i> Mon-Fri 9AM-6PM EST</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 SchawPeptideLabs. All rights reserved. For research purposes only.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Image Zoom Modal -->
+    <div class="image-zoom-modal" id="image-zoom-modal" style="display: none;">
+        <div class="zoom-modal-overlay" onclick="closeImageZoom()"></div>
+        <div class="zoom-modal-content">
+            <button class="zoom-close-btn" onclick="closeImageZoom()">
+                <i class="fas fa-times"></i>
+            </button>
+            <img id="zoomed-image" src="" alt="" />
+        </div>
+    </div>
+
+    <!-- Toast Notifications -->
+    <div class="toast-container" id="toast-container"></div>
+
+    <!-- First Time Buyer Discount Popup -->
+    <div class="discount-popup-overlay" id="discount-popup-overlay" style="display: none;">
+        <div class="discount-popup">
+            <button class="discount-close-btn" onclick="closeDiscountPopup()">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="discount-content">
+                <div class="discount-header">
+                    <div class="discount-badge">
+                        <i class="fas fa-gift"></i>
+                        <span>WELCOME OFFER</span>
+                    </div>
+                    <h2>First Time Buyer Special!</h2>
+                    <p>Welcome to SchawPeptideLabs! Get started with premium research compounds at an exclusive discount.</p>
+                </div>
+                
+                <div class="discount-offer">
+                    <div class="discount-percentage">
+                        <span class="percentage-number">10%</span>
+                        <span class="percentage-text">OFF</span>
+                    </div>
+                    <div class="discount-details">
+                        <h3>Your First Order</h3>
+                        <p>Use code <strong>WELCOME10</strong> at checkout</p>
+                        <div class="offer-features">
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Valid on all products</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Free shipping on orders $100+</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Premium quality guaranteed</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="discount-actions">
+                    <button class="claim-discount-btn" onclick="claimDiscount()">
+                        <i class="fas fa-tag"></i>
+                        <span>Claim Your 10% Off</span>
+                    </button>
+                    <button class="maybe-later-btn" onclick="closeDiscountPopup()">
+                        Maybe Later
+                    </button>
+                </div>
+                
+                <div class="discount-footer">
+                    <p><i class="fas fa-clock"></i> Limited time offer for new customers only</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
